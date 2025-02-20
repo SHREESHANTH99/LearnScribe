@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT JEE | HOME</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2ba6ed',
+                        secondary: '#333',
+                        accent: '#007BFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Background Image with Overlay -->
+    <div id="background-image" class="fixed inset-0 bg-cover bg-center z-[-1]"></div>
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-[-1]"></div>
+
+    <!-- Header -->
+    <header class="bg-primary text-white p-5 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Apni Kaksha</h1>
+            <button onclick="toggleDarkMode()" class="text-2xl p-2 rounded-full bg-gray-600 hover:bg-gray-500 transition">
+                🌙
+            </button>
+        </div>
+    </header> 
+
+    <!-- Navigation Bar -->
+    <nav class="bg-secondary text-white py-3 shadow-md">
+        <div class="container mx-auto flex justify-center space-x-6">
+            <a href="#home" class="hover:text-accent">Home</a>
+            <a href="#college-reviews" class="hover:text-accent">College Reviews</a>
+            <a href="#courses" class="hover:text-accent">Courses</a>
+            <a href="#study-material" class="hover:text-accent">Study Material</a>
+            <a href="#login-signup" class="hover:text-accent">Login/Signup</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <!-- Home Section -->
+        <section id="home" class="text-center py-10">
+            <h2 class="text-4xl text-primary mb-4">Welcome to Apni Kaksha</h2>
+            <p class="text-lg"><h2>This is the Home section.</h2></p>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-10">
+            <h2 class="text-4xl text-primary text-center mb-6">Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <video src="videos/anatomy.mp4" class="w-full rounded-lg shadow-lg" controls loading="lazy"></video>
+                <video src="videos/Chemistry.mp4" class="w-full rounded-lg shadow-lg" controls loading="lazy"></video>
+                <video src="videos/Medical.mp4" class="w-full rounded-lg shadow-lg" controls loading="lazy"></video>
+            </div>
+        </section>
+
+        <!-- College Reviews Section -->
+        <section id="college-reviews" class="py-10">
+            <h2 class="text-4xl text-primary text-center mb-6">College Reviews</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <iframe class="w-full h-60 rounded-lg shadow-lg" src="https://www.youtube.com/embed/1VfqlKtVF7U" allowfullscreen loading="lazy"></iframe>
+                <iframe class="w-full h-60 rounded-lg shadow-lg" src="https://www.youtube.com/embed/zGJ5BlbKfLM" allowfullscreen loading="lazy"></iframe>
+                <iframe class="w-full h-60 rounded-lg shadow-lg" src="https://www.youtube.com/embed/j0biLzzJ2XQ" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Study Material Section -->
+        <section id="study-material" class="py-10">
+            <h2 class="text-4xl text-primary text-center mb-6">Study Material</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a target="_blank" href="ODE.pdf"><img src="images/ODE2.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform" alt="ODE Material"></a>
+                <a target="_blank" href="PYQ_sem2.pdf"><img src="images/PYQ.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform" alt="PYQ"></a>
+                <a target="_blank" href="EG.pdf"><img src="images/EG.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform" alt="EG"></a>
+                <a target="_blank" href="ENGINEERING_MECHANICS.pdf"><img src="images/MECHANICS.jpg" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform" alt="Mechanics"></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white text-center p-4">
+        <a href="#" class="hover:text-accent">FAQ</a> |
+        <a href="#" class="hover:text-accent">Contact us</a> |
+        <a href="#" class="hover:text-accent">Terms of Use</a> |
+        <a href="#" class="hover:text-accent">Privacy Policy</a>
+        <p class="mt-2">&copy; 2025 | Apni Kaksha</p>
+    </footer>
+
+    <!-- JavaScript for Background Image -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bgImage = document.getElementById("background-image");
+            bgImage.style.backgroundImage = "url('images/digi.webp')";
+            bgImage.style.backgroundSize = "cover";
+            bgImage.style.backgroundPosition = "center";
+        });
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
