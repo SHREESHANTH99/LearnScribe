@@ -51,6 +51,31 @@
         footer a:hover {
             color: #2ba6ed;
         }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .social-icon {
+            background-color: rgba(128, 128, 128, 0.8);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-3px);
+            background-color: rgba(128, 128, 128, 1);
+        }
+        .social-icon a {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -95,15 +120,31 @@
             <a target="_blank" href="ENGINEERING_MECHANICS.pdf"><img src="images/MECHANICS.jpg" alt="" width="24%" height="60%"></a>
         </section>
         <section id="login-signup">
-            <h2 >Login/Signup</h2>
+            <h2>Login/Signup</h2>
             <p>This is the login/signup section.</p>
         </section>
         <section>
-            <h2 >Our Founder</h2>
+            <h2>Our Founder</h2>
             <img src="images/Founder.jpg" alt="">
-            <h3></h3>
-            <a href="http://www.linkedin.com/in/shreeshanth-shetty-38b86a331" target="_blank" rel="noopener noreferrer"><h3>LinkedIn</h3></a>&nbsp;&nbsp;|&nbsp;
-            <a href="https://www.codechef.com/users/husk_trek_94" target="_blank" rel="noopener noreferrer"><h3>CodeChef</h3></a>
+            <div class="social-links">
+                <div class="social-icon">
+                    <a href="http://www.linkedin.com/in/shreeshanth-shetty-38b86a331" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+                <div class="social-icon">
+                    <a href="https://www.codechef.com/users/husk_trek_94" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 18l6-6-6-6"></path>
+                            <path d="M8 6l-6 6 6 6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
             <h4>TEDx speaker and #1 Online JEE Educator | Founder of 5 YouTube Channels with 2.5 million young hustlers.</h4>
             <h5>I help students across India find their right career path. I have been a guest speaker at 22 Colleges including Top IITs, BITS Pilani, IIIT's, NIT's, SRCC, Jadavpur University etc. I am the #1 Educator of JEE on India's biggest online platform
                 and I believe that everyone has the right to quality education and with the help of my social media platforms, I have helped millions of students find their path to success in the last 5 years. In the next few decades, India will rise
